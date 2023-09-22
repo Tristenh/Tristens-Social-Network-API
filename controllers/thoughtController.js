@@ -30,7 +30,7 @@ module.exports = {
   async createThought(req, res) {
     try {
       const thoughts = await Thought.create(req.body);
-      res.json(thoughts);
+      res.json({ message: "created thought", thoughts });
     } catch (error) {
       res.status(500).json(error);
     }
@@ -45,7 +45,7 @@ module.exports = {
       if (!thoughts) {
         res.status(404).json({ message: "no thoughts found with that id" });
       }
-      res.json(thoughts);
+      res.json({ message: "deleted thought", thoughts });
     } catch (error) {
       res.status(500).json(error);
     }
@@ -62,7 +62,7 @@ module.exports = {
       if (!thoughts) {
         res.status(404).json({ message: "no thoughts found with that id" });
       }
-      res.json(thoughts);
+      res.json({ message: "updated thought", thoughts });
     } catch (error) {
       res.status(500).json(error);
     }
@@ -79,7 +79,7 @@ module.exports = {
       if (!thoughts) {
         res.status(404).json({ message: "no thoughts found with that id" });
       }
-      res.json(thoughts);
+      res.json({ message: "created reaction", thoughts });
     } catch (error) {
       res.status(500).json(error);
     }
@@ -96,7 +96,7 @@ module.exports = {
       if (!thoughts) {
         res.status(404).json({ message: "no thoughts found with that id" });
       }
-      res.json(thoughts);
+      res.json({ message: "deleted reaction", thoughts });
     } catch (error) {
       res.status(500).json(error);
     }

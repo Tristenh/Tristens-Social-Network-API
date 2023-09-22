@@ -35,7 +35,7 @@ module.exports = {
   async createUser(req, res) {
     try {
       const user = await User.create(req.body);
-      res.json(user);
+      res.json({ message: "created new user", user });
     } catch (err) {
       res.status(500).json(err);
     }
@@ -83,7 +83,7 @@ module.exports = {
           .json({ message: "No user found with that ID :(" });
       }
 
-      res.json(user);
+      res.json({ message: "updated user", user });
     } catch (err) {
       res.status(500).json(err);
     }
@@ -102,7 +102,7 @@ module.exports = {
           .status(404)
           .json({ message: "No user found with that ID :(" });
       }
-      res.json(user);
+      res.json({ message: "added friend to user", user });
     } catch (err) {
       res.status(500).json(err);
     }
@@ -121,7 +121,7 @@ module.exports = {
           .status(404)
           .json({ message: "No user found with that ID :(" });
       }
-      res.json(user);
+      res.json({ message: "removed friend to user", user });
     } catch (err) {
       res.status(500).json(err);
     }
