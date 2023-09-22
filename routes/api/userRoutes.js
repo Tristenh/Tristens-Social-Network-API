@@ -18,11 +18,8 @@ router.route("/").get(getUsers).post(createUser);
 // CRUD operations for userId
 router.route("/:userId").get(getSingleUser).delete(deleteUser).put(updateUser);
 
-// CRUD operations for freinds associated with the userId
-router.route("/:userId/friends/").post(addFriend);
-
-// CRUD operation for deleteing freinds associated with the userId
-router.route("/:userId/friends/:friends").delete(deleteFriend);
+// CRUD operation for deleteing friends associated with the userId
+router.route("/:userId/friends/:friends").put(addFriend).delete(deleteFriend);
 
 // export router
 module.exports = router;
