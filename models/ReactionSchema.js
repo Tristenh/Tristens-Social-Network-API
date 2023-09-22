@@ -1,14 +1,8 @@
 // import mongoose components
-const { Schema, Types } = require("mongoose");
+const { Schema } = require("mongoose");
 
 // create new reactionSchema Schema
 const reactionSchema = new Schema({
-  // define reactionId with constraints
-  reactionId: {
-    type: Schema.Types.ObjectId,
-    default: () => new Types.ObjectId(),
-  },
-
   // define reactionBody with constraints
   reactionBody: {
     type: String,

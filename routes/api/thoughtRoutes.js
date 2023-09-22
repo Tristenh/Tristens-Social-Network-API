@@ -23,10 +23,10 @@ router
   .put(updateThought);
 
 //   CRUD operations for reactions associated with a thought by getting the thoughtId
-router
-  .route("/:thoughtId/reactions")
-  .post(createReaction)
-  .delete(deleteReaction);
+router.route("/:thoughtId/reactions").post(createReaction);
+
+// CRUD operation to delete a reaction associated with the thoughtId
+router.route("/:thoughtId/reactions/:reactions").delete(deleteReaction);
 
 //   export router
 module.exports = router;
