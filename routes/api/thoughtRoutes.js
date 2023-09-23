@@ -26,7 +26,7 @@ router
 router.route("/:thoughtId/reactions").post(createReaction);
 
 // CRUD operation to delete a reaction associated with the thoughtId
-router.route("/:thoughtId/reactions/:reactions").delete(deleteReaction);
+router.route("/:thoughtId/reactions/:reactionsId").delete(deleteReaction);
 
 //   export router
 module.exports = router;
