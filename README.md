@@ -9,7 +9,7 @@ Effortlessly manage your entire social media platform  with Tristen's Social Net
 * open VS Code
 * open integrated terminal on server.js
 * run the following commands,  npm install, node seeds/ then npm start
-* Open insomnia and make a GET request to http://localhost:3001/api/thoughts/ and or http://localhost:3001/api/users/ to get relevant infomation.
+* Open insomnia and make a GET request to http://localhost:3001/api/thoughts/ and or http://localhost:3001/api/users/ to start getting your data.
 
 ## walkthough video
 [social media api walkthrough.webm](https://github.com/Tristenh/Social-Network-API/assets/121472192/5cfce066-45d5-4960-87c5-ab16c869fcf4)
