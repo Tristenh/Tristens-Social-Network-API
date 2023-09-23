@@ -35,6 +35,7 @@ const thoughtSchema = new Schema(
   },
   {
     toJSON: {
+      virtuals: true,
       getters: true,
     },
   }
@@ -48,6 +49,7 @@ thoughtSchema.set("toJSON", {
   virtuals: true,
   transform: (doc, ret) => {
     delete ret.id;
+    delete ret.__v;
   },
 });
 
