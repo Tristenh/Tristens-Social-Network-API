@@ -1,5 +1,5 @@
 # Social Network API
-Effortlessly manage your entire social media platform  with Tristen's Social Network API, this express application utilizes MongoDB and Mongoose.js to store items in a dynamic database, useing standard http methods: 
+Effortlessly manage your entire social media platform  with Tristen's Social Network API, this express application utilizes MongoDB and Mongoose.js to store items in a dynamic database, using standard http methods: 
 * GET for data retrival.
 * POST for creating objects.
 * PUT for updating objects.
